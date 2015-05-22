@@ -24,7 +24,12 @@ def init_args(exclude=[]):
             func(self, *args, **kwargs)
             super(type(self), self).__init__(self)
 
-            for var in exclude:
-                delattr(self, var)
+            import collections
+            if isinstance(exclude, collections.Iterable):
+                for var in exclude:
+                    delattr(self, var)
         return __init__
+
+    if type(exclude) == type(decorator):
+        return decorator(exclude)
     return decorator
