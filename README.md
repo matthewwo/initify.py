@@ -137,7 +137,21 @@ d.barks  # Attribute Error: barks is not defined!
 Now this is neat hey?
 
 ## Installation
-There isn't really a neat way of installing this awesome little decorator, yet. To use initify in your project, first download initify.py from this repo to your project.
+Download this repo using ```git``` or HTTP.
+
+```bash
+git clone https://github.com/prankymat/initify.py.git
+```
+Change directory into the repo
+
+```bash
+cd initify.py
+```
+Install using setup.py
+
+```bash
+python3 setup.py install
+```
 
 Then whichever class you're using initify, do an import before using. Example:
 
