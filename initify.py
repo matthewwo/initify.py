@@ -24,8 +24,7 @@ def init_args(exclude=[]):
             func(self, *args, **kwargs)
             super(type(self), self).__init__(self)
 
-            import collections
-            if isinstance(exclude, collections.Iterable):
+            if getattr(exclude, '__iter__', False):
                 for var in exclude:
                     delattr(self, var)
         return __init__
