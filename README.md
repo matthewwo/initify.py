@@ -92,7 +92,7 @@ That's dull :/ Don't judge until you see this:
 ### Exclused variables
 ```python
 class Animal:
-	def __init__(self):
+	def __init__(self, obj):  # REQUIRED reserve "obj" for super class injecting
 		self.age = 0
 		self.name = ""
 		self.color = ""
