@@ -54,18 +54,18 @@ If you have polymorphism structured classes, you'd love initify.
 
 ```python
 class Animal:
-	def __init__(self):
+	def __init__(self, obj):  # REQUIRED reserve "obj" for super class injecting
 		self.age = 0
 		self.name = ""
 		self.color = ""
 		...
-		
+
 class Dog(Animal):
 	@init_args
 	def __init__(self, pet=True):
 		pass
 	...
-		
+
 class Cat(Animal):
 	@init_args
 	def __init__(self, wild=False):
@@ -100,13 +100,13 @@ class Animal:
 		self.barks = True  # Only dog barks
 		self.meows = True  # and only cat meows
 		...
-		
+
 class Dog(Animal):
 	@init_args(exclude=['meows'])  # Don't inherit meows from super class!
 	def __init__(self, pet=True):
 		pass
 	...
-		
+
 class Cat(Animal):
 	@init_args(exclude=['barks'])  # Don't inherit barks from super class!
 	def __init__(self, wild=False):
