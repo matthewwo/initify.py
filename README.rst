@@ -20,8 +20,8 @@ If you have polymorphism structured classes, you'd love initify.
 
 .. code:: python
 
-    class Animal:
-        def __init__(self, obj):  # REQUIRED reserve "obj" for super class injecting
+    class Animal(object):
+        def __init__(self):
             self.age = 0
             self.name = ""
             self.color = ""

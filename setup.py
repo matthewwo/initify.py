@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='initify',
-      version='0.1.4',
+      version='0.1.5',
       description='Simplify your __init__(self) function.',
       url='https://github.com/prankymat/initify.py',
       author='Matthew Wo',
