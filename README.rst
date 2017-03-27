@@ -62,8 +62,10 @@ Exclused variables
 
 .. code:: python
 
-    class Animal:
-        def __init__(self, obj):  # REQUIRED reserve "obj" for super class injecting
+    # Must declare with new-style class in python 2.7 or earlier
+    # ``class Animal:`` is fine if using python 3 or later
+    class Animal(object):
+        def __init__(self):
             self.age = 0
             self.name = ""
             self.color = ""

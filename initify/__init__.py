@@ -22,7 +22,7 @@ def init_args(exclude=[]):
                         value = defaults[key]
                 setattr(self, key, value)
             func(self, *args, **kwargs)
-            super(type(self), self).__init__(self)
+            super(self.__class__, self).__init__()
 
             if getattr(exclude, '__iter__', False):
                 for var in exclude:
