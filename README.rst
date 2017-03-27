@@ -109,11 +109,15 @@ Now this is neat hey?
 Installation
 ------------
 
-Install ``initify`` with pip.
+Install ``initify`` with pip or pip3.
 
 .. code:: bash
 
     pip install initify
+
+.. code:: bash
+
+    pip3 install initify
 
 Then whichever class you're using initify, do an import before using.
 Example:
